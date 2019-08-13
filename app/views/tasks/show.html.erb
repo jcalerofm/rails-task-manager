@@ -4,7 +4,9 @@
 
 <i class='far fa-edit'></i><%= link_to 'Edit task', edit_path %>
 
-<p><%= @task.details%></p>
+<p><%= @task.details%>
+  <%= link_to "✂️", task_path(@task), method: :delete %>
+</p>
 
 <% if @task.completed %>
   <p>
